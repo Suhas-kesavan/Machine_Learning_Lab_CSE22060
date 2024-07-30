@@ -28,14 +28,37 @@ def matrix_multiplication(m1,m2):
         result.append(row)
     return result
     return     
+def find_common_elements(arr1,arr2):
+    common = []
+    for i in arr1:
+        if i in arr2:
+            common.append(i)
+    return common
 
+def transpose_matrix(matrix):
+    transpose = []
+    for i in range(len(matrix[0])):
+        row = []
+        for j in range(len(matrix)):
+            row.append(matrix[j][i])
+        transpose.append(row)
+    return transpose
 # v,c = count_vowels_consonants()
 # print("Vowels: ", v)
 # print("Consonants: ", c)
-m1 = np.array([[1,2,3],[4,5,6],[7,8,9]])
-m2 = np.array([[1,2],[3,4],[5,6]])
-result = matrix_multiplication(m1,m2)
-print("multiplication of 2 matrix: ",result)
+# m1 = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# m2 = np.array([[1,2],[3,4],[5,6]])
+# result = matrix_multiplication(m1,m2)
+# print("multiplication of 2 matrix: ",result)
+
+# arr1 = [1,2,3,4,5]
+# arr2 = [4,5,6,7,8]
+# common = find_common_elements(arr1,arr2)
+# print("Common elements: ",common)
+
+matrix = np.array([[1,2,3],[4,5,6],[7,8,9]])
+transpose = transpose_matrix(matrix)
+print("Transpose of matrix: ",transpose)
 
 
 
