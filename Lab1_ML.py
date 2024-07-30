@@ -11,6 +11,7 @@ def count_vowels_consonants():
         elif i.isalpha():
             consonant_count += 1
     return vowel_count, consonant_count
+
 def matrix_multiplication(m1,m2):
     sm1 = m1.shape
     sm2 = m2.shape
@@ -27,7 +28,7 @@ def matrix_multiplication(m1,m2):
             row.append(sum)
         result.append(row)
     return result
-    return     
+    
 def find_common_elements(arr1,arr2):
     common = []
     for i in arr1:
@@ -43,13 +44,15 @@ def transpose_matrix(matrix):
             row.append(matrix[j][i])
         transpose.append(row)
     return transpose
+
 # v,c = count_vowels_consonants()
 # print("Vowels: ", v)
 # print("Consonants: ", c)
-# m1 = np.array([[1,2,3],[4,5,6],[7,8,9]])
-# m2 = np.array([[1,2],[3,4],[5,6]])
-# result = matrix_multiplication(m1,m2)
-# print("multiplication of 2 matrix: ",result)
+
+m1 = np.array([[1,2,3],[4,5,6],[7,8,9]])
+m2 = np.array([[1,2],[3,4],[5,6]])
+result = matrix_multiplication(m1,m2)
+print("multiplication of 2 matrix: ",result)
 
 # arr1 = [1,2,3,4,5]
 # arr2 = [4,5,6,7,8]
